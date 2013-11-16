@@ -67,10 +67,10 @@ HITCOUNT_EXCLUDE_USER_GROUP: don’t count any hits from certain logged in users
 
 You need to add one line to your urls.py file.
 ----------------------------------------------
-urlpatterns = patterns('',
-    url(r'^ajax/hit/$', # you can change this url if you would like
-        update_hit_count_ajax,
-        name='hitcount_update_ajax'), # keep this name the same
+    urlpatterns = patterns('',
+        url(r'^ajax/hit/$', # you can change this url if you would like
+            update_hit_count_ajax,
+            name='hitcount_update_ajax'), # keep this name the same
 
 
 Edit your templates
