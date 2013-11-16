@@ -44,7 +44,6 @@ if you plan on pulling future changes and don't want to keep running
 
 
 Then modify your settings.py, adding the package hitcount in INSTALLED_APPS
---------------------------------------------------------------------------------
 
     INSTALLED_APPS = (
         '...',
@@ -53,10 +52,10 @@ Then modify your settings.py, adding the package hitcount in INSTALLED_APPS
  
 
 There are three additional settings you can add to your settings.py file:
--------------------------------------------------------------------------
-HITCOUNT_KEEP_HIT_ACTIVE = { 'days': 7 }
-HITCOUNT_HITS_PER_IP_LIMIT = 0
-HITCOUNT_EXCLUDE_USER_GROUP = ( 'Editor', )
+
+    HITCOUNT_KEEP_HIT_ACTIVE = { 'days': 7 }
+    HITCOUNT_HITS_PER_IP_LIMIT = 0
+    HITCOUNT_EXCLUDE_USER_GROUP = ( 'Editor', )
 
 
 HITCOUNT_KEEP_HIT_ACTIVE: is the number of days, weeks, months, hours, etc (timedelta kwargs), that an Hit is kept ‘active’. If a Hit is ‘active’ a repeat viewing will not be counted. After the active period ends, however, a new Hit will be recorded. You can decide how long you want this period to last …
