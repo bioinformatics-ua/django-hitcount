@@ -46,10 +46,10 @@ if you plan on pulling future changes and don't want to keep running
 Then modify your settings.py, adding the package hitcount in INSTALLED_APPS
 --------------------------------------------------------------------------------
 
-INSTALLED_APPS = (
-    '...',
-    'hitcount',
-)
+    INSTALLED_APPS = (
+        '...',
+        'hitcount',
+    )
  
 
 There are three additional settings you can add to your settings.py file:
