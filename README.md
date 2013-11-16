@@ -75,13 +75,13 @@ You need to add one line to your urls.py file.
 
 Edit your templates
 -------------------
-{% load hitcount_tags %}
-<script type="text/javascript">
-    var csrf_token = '{{ csrf_token }}';
-    $(document).ready(function() {
-        {% get_hit_count_javascript for object %}
-    });
-</script>
+    {% load hitcount_tags %}
+    <script type="text/javascript">
+        var csrf_token = '{{ csrf_token }}';
+        $(document).ready(function() {
+            {% get_hit_count_javascript for object %}
+        });
+    </script>
 
 
 Display the hits!
