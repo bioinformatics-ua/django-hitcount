@@ -43,7 +43,7 @@ def _update_hit_count(request, hitcount):
 
     # check limit on hits from a unique ip address (HITCOUNT_HITS_PER_IP_LIMIT)
     if hits_per_ip_limit:
-        if qs.filter(ip__exact=ip).count() > hits_per_ip_limit:
+        if qs.filter(ip__exact=ip, hitcount__object_pk=hitcount.content_object.pk).count() >= hits_per_ip_limit:
             return False
 
     # create a generic Hit object with request data
