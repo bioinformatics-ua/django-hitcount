@@ -21,8 +21,6 @@ setup(
     long_description=README,
     author='Damon Timm',
     author_email='damontimm@gmail.com',
- 
-    packages = find_packages(),
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Plugins',
