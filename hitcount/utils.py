@@ -1,8 +1,12 @@
-from django.conf import settings
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 import re
+import warnings
+
 
 # this is not intended to be an all-knowing IP address regex
 IP_RE = re.compile('\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}')
+
 
 def get_ip(request):
     """
@@ -34,3 +38,10 @@ def get_ip(request):
             pass
 
     return ip_address
+
+
+class RemovedInHitCount13Warning(DeprecationWarning):
+    pass
+
+# enable warnings by default for our deprecated
+warnings.simplefilter("default", RemovedInHitCount13Warning)

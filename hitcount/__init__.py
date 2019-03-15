@@ -1,12 +1,5 @@
-VERSION = (0, 2, 0, 'beta', 1)
+from __future__ import unicode_literals
 
-def get_version():
-    version = '%s.%s' % (VERSION[0], VERSION[1])
-    if VERSION[2]:
-        version = '%s.%s' % (version, VERSION[2])
-    else:
-        if VERSION[3] != 'final':
-            version = '%s %s' % (version, VERSION[3])
-    return version
+VERSION = (1, 3, 0)
 
-__version__ = get_version()
+__version__ = '.'.join(str(i) for i in VERSION)
