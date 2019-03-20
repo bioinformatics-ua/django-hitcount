@@ -222,21 +222,7 @@ class GetHitCountJavascriptVariables(template.Node):
         self.as_varname = as_varname
 
     def render(self, context):
-<<<<<<< HEAD
-        ctype, object_pk = get_target_ctype_pk(context, self.object_expr)
-        
-        obj, created = HitCount.objects.get_or_create(content_type=ctype, 
-                        object_pk=object_pk)
-
-        js =    "$.post( '" + reverse('hitcount_update_ajax') + "',"   + \
-                "\n\t{ hitcount_pk : '" + str(obj.pk) + "', csrfmiddlewaretoken: csrf_token },\n"         + \
-                "\tfunction(data, status) {\n"                         + \
-                "\t\tif (data.status == 'error') {\n"                  + \
-                "\t\t\t// do something for error?\n"                   + \
-                "\t\t}\n\t},\n\t'json');"
-=======
         HitcountVariables = namedtuple('HitcountVariables', 'pk ajax_url hits')
->>>>>>> b35d2f9c213f6a2ff0e5d0a746339a5b84b4d416
 
         hit_count = get_hit_count_from_obj_variable(context, self.obj_variable, 'get_hit_count_js_variables')
 
